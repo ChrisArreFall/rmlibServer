@@ -7,7 +7,9 @@
 
 #include "dataStructures/List.h"
 #include "grapher/FileUpdater.h"
-
+/**
+ *
+ */
 class Memory{
 public:
     List memory;
@@ -19,10 +21,14 @@ public:
     inline bool search(int key);
     inline Memory(){
         memorySize = 0;
-        contador=5;
+        contador=6;
     }
 };
-
+/**
+ *
+ * @param key
+ * @param valor
+ */
 inline void Memory::addMemory(int key, string valor) {
     memorySize+=valor.size();
     cout<< "Tamaño de memoria del servidor usada: "<<memorySize<<endl;
@@ -30,6 +36,10 @@ inline void Memory::addMemory(int key, string valor) {
     memory.insertFirst(key,valor);
     contador++;
 }
+/**
+ *
+ * @param key
+ */
 inline void Memory::deleteMemory(int key) {
     memorySize-=memory.search(key)->value.size();
     file.updater(contador,memorySize,"/Users/chris/ProgramaPrueba/cmake-build-debug/memoria.txt");

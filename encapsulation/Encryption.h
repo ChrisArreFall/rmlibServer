@@ -10,11 +10,13 @@
 #include <iostream>
 
 using namespace std;
-
+/**
+ *
+ */
 class Encryption {
 
 public:
-    string start(string valor, char key[]);
+    string start(string valor);
 };
 
 

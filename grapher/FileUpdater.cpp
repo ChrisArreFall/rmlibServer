@@ -3,10 +3,13 @@
 //
 
 #include "FileUpdater.h"
-#include "FileUpdater.h"
 #include <zconf.h>
-#include "FileUpdater.h"
-
+/**
+ *
+ * @param x
+ * @param y
+ * @param FILEP
+ */
 void FileUpdater::updater(double x,double y,const char * FILEP) {
     FILE * fileF = fopen(FILEP, "a+");
     sleep(1);

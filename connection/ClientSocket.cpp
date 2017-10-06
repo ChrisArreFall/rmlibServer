@@ -103,6 +103,7 @@ bool tcp_client::send_data(string data)
 string tcp_client::receive(int size=512)
 {
     char buffer[size];
+    memset(buffer, '\0', sizeof(buffer));
     string reply;
 
     //Receive a reply from the server
